@@ -1,4 +1,6 @@
 extends Area2D
 
-func _ready():
-	pass # Replace with function body.
+export var animation_intensity = 3
+
+func _process(delta):
+	$AnimatedSprite.position = Vector2(0, sin(OS.get_ticks_msec() / 100) * animation_intensity)
