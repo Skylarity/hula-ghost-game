@@ -21,7 +21,7 @@ func _ready():
 	randomize()  # init prng
 
 	screen_size = get_viewport_rect().size
-	lane_offset = (screen_size.y / num_lanes) / 2
+	lane_offset = (screen_size.y / num_lanes) * 0.42  # magic numnber to account for curve in lines
 
 	lane_setup()
 	player_setup()

@@ -17,6 +17,8 @@ _global_script_class_icons={
 
 config/name="Hula Ghost"
 run/main_scene="res://Scenes/PlayArea.tscn"
+boot_splash/image="res://Sprites/Hula Ghost.png"
+boot_splash/bg_color=Color( 0.121569, 0.117647, 0.188235, 1 )
 config/icon="res://icon.png"
 
 [input]
