@@ -1,13 +1,17 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/PlayArea.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Lane.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Note.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/LaneItem.tscn" type="PackedScene" id=5]
 
 [node name="PlayArea" type="Node2D"]
 script = ExtResource( 1 )
 Player = ExtResource( 3 )
 Lane = ExtResource( 2 )
+LaneItem = ExtResource( 5 )
+Note = ExtResource( 4 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 1024.0
@@ -17,3 +21,6 @@ __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
+
+[node name="LaneItemTimer" type="Timer" parent="."]
+[connection signal="timeout" from="LaneItemTimer" to="." method="_on_LaneItemTimer_timeout"]

@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Sprites/Block.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Note.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/NoteParticles.tscn" type="PackedScene" id=3]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -11,11 +13,14 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 16, 16 )
+extents = Vector2( 32, 32 )
 
-[node name="Area2D" type="Area2D"]
+[node name="Note" type="Area2D"]
+script = ExtResource( 2 )
+NoteParticles = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

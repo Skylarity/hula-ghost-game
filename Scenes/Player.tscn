@@ -11,8 +11,9 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 60.8131, 48.573 )
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 26.7019
+height = 47.119
 
 [node name="Player" type="Area2D"]
 script = ExtResource( 1 )
@@ -25,4 +26,7 @@ scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -7.47644, -1.16819 )
+rotation = 0.227284
 shape = SubResource( 2 )
+[connection signal="area_entered" from="." to="." method="_on_Player_area_entered"]

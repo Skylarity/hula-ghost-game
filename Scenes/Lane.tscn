@@ -4,7 +4,7 @@
 
 [sub_resource type="Curve2D" id=1]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, -64, 0, -358.539, -35.194, 358.539, 35.194, 392.534, 51.5278, 0, 0, 0, 0, 1088, 0 )
+"points": PoolVector2Array( 0, 0, 0, 0, -64, 0, -196.316, 0.549906, 196.316, -0.549906, 511.314, 21.283, 0, 0, 0, 0, 1088, 0 )
 }
 
 [node name="Lane" type="Node2D"]
